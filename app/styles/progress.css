@@ -1,0 +1,350 @@
+/* ===========================================
+   Quest Mini App - Progress Styles
+   Progress bars, meters, and indicators
+   =========================================== */
+
+/* Progress Bar Base */
+.progress {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress__bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 9999px;
+    transition: width var(--transition-normal);
+}
+
+/* Progress Sizes */
+.progress--sm {
+    height: 4px;
+}
+
+.progress--lg {
+    height: 12px;
+}
+
+.progress--xl {
+    height: 20px;
+}
+
+/* Progress Variants */
+.progress--success .progress__bar {
+    background: var(--success-color);
+}
+
+.progress--warning .progress__bar {
+    background: var(--warning-color);
+}
+
+.progress--error .progress__bar {
+    background: var(--error-color);
+}
+
+.progress--info .progress__bar {
+    background: var(--info-color);
+}
+
+/* Striped Progress */
+.progress--striped .progress__bar {
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 1rem 1rem;
+}
+
+.progress--animated .progress__bar {
+    animation: progress-stripes 1s linear infinite;
+}
+
+@keyframes progress-stripes {
+    0% {
+        background-position: 1rem 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Progress with Label */
+.progress-labeled {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-labeled__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-labeled__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.progress-labeled__value {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+/* Circular Progress */
+.progress-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.progress-circle__svg {
+    transform: rotate(-90deg);
+}
+
+.progress-circle__bg {
+    fill: none;
+    stroke: var(--bg-tertiary);
+    stroke-width: 8;
+}
+
+.progress-circle__bar {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset var(--transition-normal);
+}
+
+.progress-circle__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Progress Circle Sizes */
+.progress-circle--sm {
+    width: 48px;
+    height: 48px;
+}
+
+.progress-circle--sm .progress-circle__bg,
+.progress-circle--sm .progress-circle__bar {
+    stroke-width: 6;
+}
+
+.progress-circle--sm .progress-circle__value {
+    font-size: 0.875rem;
+}
+
+.progress-circle--lg {
+    width: 120px;
+    height: 120px;
+}
+
+.progress-circle--lg .progress-circle__bg,
+.progress-circle--lg .progress-circle__bar {
+    stroke-width: 10;
+}
+
+.progress-circle--lg .progress-circle__value {
+    font-size: 1.75rem;
+}
+
+/* Quest Progress */
+.quest-progress {
+    padding: 16px;
+    background: var(--surface-color);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.quest-progress__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.quest-progress__title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.quest-progress__count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.quest-progress__bar {
+    margin-bottom: 12px;
+}
+
+.quest-progress__reward {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.875rem;
+    color: var(--primary-color);
+}
+
+/* Streak Progress */
+.streak-progress {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.streak-progress__day {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all var(--transition-fast);
+}
+
+.streak-progress__day--completed {
+    background: var(--primary-color);
+    color: white;
+}
+
+.streak-progress__day--current {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Level Progress */
+.level-progress {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.level-progress__badge {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.level-progress__info {
+    flex: 1;
+}
+
+.level-progress__title {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.level-progress__bar {
+    margin-bottom: 4px;
+}
+
+.level-progress__text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Loading Progress */
+.loading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 9999;
+}
+
+.loading-progress__bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    animation: loading-progress 2s ease-in-out infinite;
+}
+
+@keyframes loading-progress {
+    0% {
+        width: 0%;
+        margin-left: 0%;
+    }
+    50% {
+        width: 50%;
+        margin-left: 25%;
+    }
+    100% {
+        width: 0%;
+        margin-left: 100%;
+    }
+}
+
+/* Step Progress */
+.step-progress {
+    display: flex;
+    align-items: center;
+}
+
+.step-progress__item {
+    display: flex;
+    align-items: center;
+}
+
+.step-progress__circle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.step-progress__item--active .step-progress__circle {
+    background: var(--primary-color);
+    color: white;
+}
+
+.step-progress__item--completed .step-progress__circle {
+    background: var(--success-color);
+    color: white;
+}
+
+.step-progress__line {
+    flex: 1;
+    height: 2px;
+    background: var(--bg-tertiary);
+    margin: 0 8px;
+}
+
+.step-progress__item--completed + .step-progress__item .step-progress__line,
+.step-progress__item--active + .step-progress__item .step-progress__line {
+    background: var(--primary-color);
+}
