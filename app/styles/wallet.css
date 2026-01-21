@@ -1,0 +1,321 @@
+/* ===========================================
+   Quest Mini App - Wallet Styles
+   Wallet connection UI components
+   =========================================== */
+
+/* Wallet Button */
+.wallet-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.wallet-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(138, 43, 226, 0.1);
+}
+
+.wallet-btn--connected {
+    background: rgba(76, 175, 80, 0.1);
+    border-color: var(--success-color);
+}
+
+/* Wallet Address Display */
+.wallet-address {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    font-family: monospace;
+    font-size: 0.875rem;
+}
+
+.wallet-address__text {
+    color: var(--text-primary);
+}
+
+.wallet-address__copy {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    transition: color var(--transition-fast);
+}
+
+.wallet-address__copy:hover {
+    color: var(--primary-color);
+}
+
+/* Wallet Balance */
+.wallet-balance {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+}
+
+.wallet-balance__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 43, 226, 0.15);
+    border-radius: 50%;
+    font-size: 1.25rem;
+}
+
+.wallet-balance__info {
+    flex: 1;
+}
+
+.wallet-balance__label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.wallet-balance__amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.wallet-balance__usd {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Wallet Card */
+.wallet-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.wallet-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.wallet-card__network {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wallet-card__network-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--success-color);
+    border-radius: 50%;
+}
+
+.wallet-card__network-name {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.wallet-card__disconnect {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 0.75rem;
+    transition: color var(--transition-fast);
+}
+
+.wallet-card__disconnect:hover {
+    color: var(--error-color);
+}
+
+.wallet-card__body {
+    padding: 24px 20px;
+}
+
+.wallet-card__address {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.wallet-card__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.wallet-card__addr-text {
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.wallet-card__balances {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.wallet-card__balance-item {
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+.wallet-card__balance-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.wallet-card__balance-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Connect Wallet Prompt */
+.connect-prompt {
+    text-align: center;
+    padding: 48px 24px;
+}
+
+.connect-prompt__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 43, 226, 0.15);
+    border-radius: 50%;
+    font-size: 2.5rem;
+}
+
+.connect-prompt__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.connect-prompt__text {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Network Badge */
+.network-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(76, 175, 80, 0.15);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.network-badge__dot {
+    width: 6px;
+    height: 6px;
+    background: var(--success-color);
+    border-radius: 50%;
+}
+
+.network-badge__name {
+    color: var(--success-color);
+}
+
+.network-badge--wrong {
+    background: rgba(244, 67, 54, 0.15);
+}
+
+.network-badge--wrong .network-badge__dot {
+    background: var(--error-color);
+}
+
+.network-badge--wrong .network-badge__name {
+    color: var(--error-color);
+}
+
+/* Transaction Item */
+.tx-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+}
+
+.tx-item__icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.tx-item__info {
+    flex: 1;
+}
+
+.tx-item__type {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.tx-item__time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.tx-item__amount {
+    text-align: right;
+}
+
+.tx-item__value {
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.tx-item__value--negative {
+    color: var(--error-color);
+}
+
+.tx-item__usd {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
