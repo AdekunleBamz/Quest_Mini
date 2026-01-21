@@ -1,0 +1,33 @@
+{
+  "name": "quest-mini-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Quest Mini App",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:base": "hardhat run scripts/deploy.js --network base",
+    "verify": "hardhat verify --network base",
+    "clean": "hardhat clean",
+    "node": "hardhat node"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "base",
+    "web3",
+    "quest",
+    "token",
+    "erc20"
+  ],
+  "author": "Quest Mini Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.19.0",
+    "dotenv": "^16.3.0"
+  }
+}
