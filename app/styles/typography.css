@@ -1,0 +1,438 @@
+/* ===========================================
+   Quest Mini - Typography System
+   Font families, sizes, and text utilities
+   =========================================== */
+
+/* ============================================
+   Font Face Imports (Optional - System Fonts)
+   ============================================ */
+
+/* Using system fonts for optimal performance */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+               Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 
+               sans-serif;
+  --font-mono: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
+               Menlo, Consolas, 'Liberation Mono', monospace;
+  
+  /* Font Sizes - Fluid Scale */
+  --text-xs: clamp(0.625rem, 0.5rem + 0.5vw, 0.75rem);
+  --text-sm: clamp(0.75rem, 0.625rem + 0.5vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.75rem + 0.5vw, 1rem);
+  --text-lg: clamp(1rem, 0.875rem + 0.5vw, 1.125rem);
+  --text-xl: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --text-2xl: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+  --text-3xl: clamp(1.5rem, 1.25rem + 1vw, 1.875rem);
+  --text-4xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.25rem);
+  --text-5xl: clamp(2.25rem, 1.75rem + 2vw, 3rem);
+  --text-6xl: clamp(3rem, 2.5rem + 2vw, 3.75rem);
+
+  /* Font Weights */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+/* ============================================
+   Base Typography
+   ============================================ */
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: var(--leading-normal);
+  color: var(--text-primary, #ffffff);
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-extrabold);
+}
+
+h2 {
+  font-size: var(--text-4xl);
+}
+
+h3 {
+  font-size: var(--text-3xl);
+}
+
+h4 {
+  font-size: var(--text-2xl);
+}
+
+h5 {
+  font-size: var(--text-xl);
+}
+
+h6 {
+  font-size: var(--text-lg);
+}
+
+/* ============================================
+   Paragraphs & Body Text
+   ============================================ */
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.lead {
+  font-size: var(--text-xl);
+  font-weight: var(--font-light);
+  line-height: var(--leading-relaxed);
+}
+
+.small,
+small {
+  font-size: var(--text-sm);
+}
+
+.text-muted {
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7));
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+a {
+  color: var(--primary, #6366f1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark, #4f46e5);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary, #6366f1);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* Unstyled list */
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Inline list */
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.list-inline li:last-child {
+  margin-right: 0;
+}
+
+/* ============================================
+   Code & Monospace
+   ============================================ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.125em 0.375em;
+  border-radius: 0.25em;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 0 0 1em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+kbd {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25em;
+  padding: 0.125em 0.5em;
+  font-size: var(--text-sm);
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+blockquote {
+  margin: 0 0 1em;
+  padding: 0.5em 1em;
+  border-left: 4px solid var(--primary, #6366f1);
+  background: rgba(255, 255, 255, 0.05);
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5em;
+  font-size: var(--text-sm);
+  font-style: normal;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7));
+}
+
+/* ============================================
+   Text Utilities - Size
+   ============================================ */
+
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+.text-6xl { font-size: var(--text-6xl); }
+
+/* ============================================
+   Text Utilities - Weight
+   ============================================ */
+
+.font-thin { font-weight: var(--font-thin); }
+.font-extralight { font-weight: var(--font-extralight); }
+.font-light { font-weight: var(--font-light); }
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+.font-extrabold { font-weight: var(--font-extrabold); }
+.font-black { font-weight: var(--font-black); }
+
+/* ============================================
+   Text Utilities - Style
+   ============================================ */
+
+.italic { font-style: italic; }
+.not-italic { font-style: normal; }
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* ============================================
+   Text Utilities - Alignment
+   ============================================ */
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ============================================
+   Text Utilities - Color
+   ============================================ */
+
+.text-primary { color: var(--primary, #6366f1); }
+.text-success { color: var(--success, #10b981); }
+.text-warning { color: var(--warning, #f59e0b); }
+.text-danger { color: var(--danger, #ef4444); }
+.text-info { color: var(--info, #3b82f6); }
+
+.text-white { color: #ffffff; }
+.text-gray { color: rgba(255, 255, 255, 0.5); }
+.text-black { color: #000000; }
+
+/* ============================================
+   Text Utilities - Line Height
+   ============================================ */
+
+.leading-none { line-height: var(--leading-none); }
+.leading-tight { line-height: var(--leading-tight); }
+.leading-snug { line-height: var(--leading-snug); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+.leading-loose { line-height: var(--leading-loose); }
+
+/* ============================================
+   Text Utilities - Letter Spacing
+   ============================================ */
+
+.tracking-tighter { letter-spacing: var(--tracking-tighter); }
+.tracking-tight { letter-spacing: var(--tracking-tight); }
+.tracking-normal { letter-spacing: var(--tracking-normal); }
+.tracking-wide { letter-spacing: var(--tracking-wide); }
+.tracking-wider { letter-spacing: var(--tracking-wider); }
+.tracking-widest { letter-spacing: var(--tracking-widest); }
+
+/* ============================================
+   Text Utilities - Overflow
+   ============================================ */
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-ellipsis { text-overflow: ellipsis; }
+.text-clip { text-overflow: clip; }
+
+.whitespace-normal { white-space: normal; }
+.whitespace-nowrap { white-space: nowrap; }
+.whitespace-pre { white-space: pre; }
+.whitespace-pre-line { white-space: pre-line; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+.break-normal { word-break: normal; overflow-wrap: normal; }
+.break-words { overflow-wrap: break-word; }
+.break-all { word-break: break-all; }
+
+/* ============================================
+   Line Clamp (Multi-line Truncation)
+   ============================================ */
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================
+   Number Formatting
+   ============================================ */
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.oldstyle-nums {
+  font-variant-numeric: oldstyle-nums;
+}
+
+.slashed-zero {
+  font-variant-numeric: slashed-zero;
+}
+
+/* ============================================
+   Gradient Text
+   ============================================ */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary, #6366f1), var(--accent, #a855f7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   Selection Styles
+   ============================================ */
+
+::selection {
+  background: var(--primary, #6366f1);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--primary, #6366f1);
+  color: white;
+}
