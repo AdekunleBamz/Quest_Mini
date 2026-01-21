@@ -1,0 +1,197 @@
+/* ===========================================
+   Quest Mini - Theme Variables (Dark/Light)
+   Theme-specific color tokens
+   =========================================== */
+
+/* ============================================
+   Dark Theme (Default)
+   ============================================ */
+
+:root,
+[data-theme="dark"] {
+  /* Background colors */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a25;
+  --bg-elevated: #22222f;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.08);
+
+  /* Surface colors */
+  --surface-1: #15151f;
+  --surface-2: #1c1c28;
+  --surface-3: #252532;
+  --surface-4: #2e2e3d;
+
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --text-disabled: rgba(255, 255, 255, 0.2);
+
+  /* Border colors */
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-emphasis: rgba(255, 255, 255, 0.2);
+
+  /* Primary brand colors */
+  --primary: #6366f1;
+  --primary-hover: #5558e0;
+  --primary-active: #4f51d8;
+  --primary-bg: rgba(99, 102, 241, 0.15);
+  --primary-border: rgba(99, 102, 241, 0.3);
+
+  /* Accent colors */
+  --accent: #a855f7;
+  --accent-hover: #9b45e8;
+  --accent-bg: rgba(168, 85, 247, 0.15);
+
+  /* Semantic colors */
+  --success: #10b981;
+  --success-hover: #0ea573;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --success-border: rgba(16, 185, 129, 0.3);
+
+  --warning: #f59e0b;
+  --warning-hover: #e8940a;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  --warning-border: rgba(245, 158, 11, 0.3);
+
+  --danger: #ef4444;
+  --danger-hover: #dc3d3d;
+  --danger-bg: rgba(239, 68, 68, 0.15);
+  --danger-border: rgba(239, 68, 68, 0.3);
+
+  --info: #3b82f6;
+  --info-hover: #3578e5;
+  --info-bg: rgba(59, 130, 246, 0.15);
+  --info-border: rgba(59, 130, 246, 0.3);
+
+  /* Gradient backgrounds */
+  --gradient-primary: linear-gradient(135deg, #6366f1, #a855f7);
+  --gradient-gold: linear-gradient(135deg, #f59e0b, #fbbf24);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--primary);
+}
+
+/* ============================================
+   Light Theme
+   ============================================ */
+
+[data-theme="light"] {
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f3f5;
+  --bg-elevated: #ffffff;
+  --bg-hover: rgba(0, 0, 0, 0.04);
+  --bg-active: rgba(0, 0, 0, 0.06);
+
+  /* Surface colors */
+  --surface-1: #f8f9fa;
+  --surface-2: #f1f3f5;
+  --surface-3: #e9ecef;
+  --surface-4: #dee2e6;
+
+  /* Text colors */
+  --text-primary: #1a1a2e;
+  --text-secondary: rgba(26, 26, 46, 0.75);
+  --text-tertiary: rgba(26, 26, 46, 0.55);
+  --text-muted: rgba(26, 26, 46, 0.4);
+  --text-disabled: rgba(26, 26, 46, 0.25);
+
+  /* Border colors */
+  --border-default: rgba(0, 0, 0, 0.1);
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-emphasis: rgba(0, 0, 0, 0.15);
+
+  /* Primary brand colors */
+  --primary: #5558e0;
+  --primary-hover: #4f51d8;
+  --primary-active: #4749cf;
+  --primary-bg: rgba(85, 88, 224, 0.1);
+  --primary-border: rgba(85, 88, 224, 0.25);
+
+  /* Accent colors */
+  --accent: #9b45e8;
+  --accent-hover: #8d38da;
+  --accent-bg: rgba(155, 69, 232, 0.1);
+
+  /* Semantic colors - slightly darker for contrast */
+  --success: #059669;
+  --success-hover: #047857;
+  --success-bg: rgba(5, 150, 105, 0.1);
+  --success-border: rgba(5, 150, 105, 0.25);
+
+  --warning: #d97706;
+  --warning-hover: #b45309;
+  --warning-bg: rgba(217, 119, 6, 0.1);
+  --warning-border: rgba(217, 119, 6, 0.25);
+
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --danger-bg: rgba(220, 38, 38, 0.1);
+  --danger-border: rgba(220, 38, 38, 0.25);
+
+  --info: #2563eb;
+  --info-hover: #1d4ed8;
+  --info-bg: rgba(37, 99, 235, 0.1);
+  --info-border: rgba(37, 99, 235, 0.25);
+
+  /* Gradient backgrounds */
+  --gradient-primary: linear-gradient(135deg, #5558e0, #9b45e8);
+  --gradient-gold: linear-gradient(135deg, #d97706, #f59e0b);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(85, 88, 224, 0.1) 0%, transparent 70%);
+
+  /* Shadows - lighter for light mode */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(85, 88, 224, 0.15);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px var(--bg-primary), 0 0 0 4px var(--primary);
+}
+
+/* ============================================
+   Theme Toggle Animation
+   ============================================ */
+
+* {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Disable transitions for non-theme changes */
+[data-no-transition] * {
+  transition: none !important;
+}
+
+/* ============================================
+   System Preference Detection
+   ============================================ */
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    /* Apply light theme variables when system prefers light */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #1a1a2e;
+    --text-secondary: rgba(26, 26, 46, 0.75);
+    /* ... other light theme values ... */
+  }
+}
